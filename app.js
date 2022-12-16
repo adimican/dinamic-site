@@ -4,6 +4,8 @@ const express = require("express");
 
 const app = express();
 
+app.use(express.static('public'));
+
 
 app.get("/about", function (req, res) {
   const pathFile = path.join(__dirname, "views", "about.html");
