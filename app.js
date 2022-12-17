@@ -40,11 +40,14 @@ app.post("/recommend", function (req, res) {
 });
 
 app.get("/restaurants", function (req, res) {
-    const filePath = path.join(__dirname, "data", "restaurants.json");
-    const filedata = fs.readFileSync(filePath);
-    const storedRestaurants = JSON.parse(filedata);
-  
-  res.render("restaurants", { numberOfRestaurants: storedRestaurants.length });
+  const filePath = path.join(__dirname, "data", "restaurants.json");
+  const filedata = fs.readFileSync(filePath);
+  const storedRestaurants = JSON.parse(filedata);
+
+  res.render("restaurants", {
+    numberOfRestaurants: storedRestaurants.length,
+    restaurants: storedRestaurants,
+  });
 });
 
 app.listen(3000);
