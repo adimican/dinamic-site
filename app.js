@@ -6,27 +6,27 @@ const express = require("express");
 
 const app = express();
 
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs');
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/about", function (req, res) {
-  res.render('about');
+  res.render("about");
 });
 
 app.get("/confirm", function (req, res) {
-    res.render('confirm');
+  res.render("confirm");
 });
 
 app.get("/", function (req, res) {
-    res.render('index');
+  res.render("index");
 });
 
 app.get("/recommend", function (req, res) {
-    res.render('recommend');
+  res.render("recommend");
 });
 
 app.post("/recommend", function (req, res) {
@@ -40,7 +40,11 @@ app.post("/recommend", function (req, res) {
 });
 
 app.get("/restaurants", function (req, res) {
-    res.render('restaurants');
+    const filePath = path.join(__dirname, "data", "restaurants.json");
+    const filedata = fs.readFileSync(filePath);
+    const storedRestaurants = JSON.parse(filedata);
+  
+  res.render("restaurants", { numberOfRestaurants: storedRestaurants.length });
 });
 
 app.listen(3000);
