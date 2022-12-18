@@ -64,7 +64,7 @@ app.get('/restaurants/:id', function (req, res) {
 
     }
   }
- 
+ res.render('404');
 });
 
 app.listen(3000);
