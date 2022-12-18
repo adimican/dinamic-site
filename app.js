@@ -6,6 +6,8 @@ const express = require("express");
 
 const app = express();
 
+const uuid = require('uuid');
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -31,6 +33,7 @@ app.get("/recommend", function (req, res) {
 
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
+  restaurant.id = uuid.v4();//creat a id prprietate generand un id cu ajutorul uuid metoda v4
   const filePath = path.join(__dirname, "data", "restaurants.json");
   const filedata = fs.readFileSync(filePath);
   const storedRestaurants = JSON.parse(filedata);

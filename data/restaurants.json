@@ -1,1 +1,81 @@
-[{"name":"Invitatii Online","address":"street test2","cuisine":"sweeden","website":"https://sweedenrestaurant.com","description":"qdsffhdj"},{"name":"Mican Ioan Adrian","address":"street test2","cuisine":"sweeden","website":"https://myrestaurant.com","description":"zxx\r\n"},{"name":"Skin Invitatie Botez","address":"street test1","cuisine":"italian","website":"https://sweedenrestaurant.com","description":"jhh"},{"name":"reparatii frigidere","address":"street test1","cuisine":"sweeden","website":"https://myrestaurant.com","description":"dfgy"},{"name":"Skin Invitatie Botez","address":"street test1","cuisine":"sweeden","website":"https://sweedenrestaurant.com","description":"zxccv"},{"name":"nou restaurant","address":"ultima","cuisine":"france","website":"https://myrestaurant.com","description":"un nou restaurant"},{"name":"Mican Ioan Adrian","address":"street test2","cuisine":"italian","website":"https://myrestaurant.com","description":"sddff"},{"name":"reparatii frigidere","address":"street test1","cuisine":"italian","website":"https://sweedenrestaurant.com","description":"sdfgf"}]
+[
+  {
+    "id": "r1",
+    "name": "Invitatii Online",
+    "address": "street test2",
+    "cuisine": "sweeden",
+    "website": "https://sweedenrestaurant.com",
+    "description": "qdsffhdj"
+  },
+  {
+    "id": "r2",
+    "name": "Mican Ioan Adrian",
+    "address": "street test2",
+    "cuisine": "sweeden",
+    "website": "https://myrestaurant.com",
+    "description": "zxx\r\n"
+  },
+  {
+    "id": "r3",
+    "name": "Skin Invitatie Botez",
+    "address": "street test1",
+    "cuisine": "italian",
+    "website": "https://sweedenrestaurant.com",
+    "description": "jhh"
+  },
+  {
+    "id": "r4",
+    "name": "reparatii frigidere",
+    "address": "street test1",
+    "cuisine": "sweeden",
+    "website": "https://myrestaurant.com",
+    "description": "dfgy"
+  },
+  {
+    "id": "r5",
+    "name": "Skin Invitatie Botez",
+    "address": "street test1",
+    "cuisine": "sweeden",
+    "website": "https://sweedenrestaurant.com",
+    "description": "zxccv"
+  },
+  {
+    "id": "r6",
+    "name": "nou restaurant",
+    "address": "ultima",
+    "cuisine": "france",
+    "website": "https://myrestaurant.com",
+    "description": "un nou restaurant"
+  },
+  {
+    "id": "r7",
+    "name": "Mican Ioan Adrian",
+    "address": "street test2",
+    "cuisine": "italian",
+    "website": "https://myrestaurant.com",
+    "description": "sddff"
+  },
+  {
+    "id": "r8",
+    "name": "reparatii frigidere",
+    "address": "street test1",
+    "cuisine": "italian",
+    "website": "https://sweedenrestaurant.com",
+    "description": "sdfgf"
+  },
+  {
+    "name": "reparatii frigidere",
+    "address": "street test1",
+    "cuisine": "italian",
+    "website": "https://sweedenrestaurant.com",
+    "description": "dcfgg"
+  },
+  {
+    "name": "Invitatii Online",
+    "address": "street test1",
+    "cuisine": "france",
+    "website": "https://myrestaurant.com",
+    "description": "fgjhjj",
+    "id": "82b7d678-ae19-4df6-8f50-3b6ebb79749f"
+  }
+]
