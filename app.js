@@ -8,6 +8,8 @@ const app = express();
 
 const uuid = require('uuid');
 
+const resData = require('./util/restaurant-data');
+
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
@@ -33,17 +35,14 @@ app.get("/recommend", function (req, res) {
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
   restaurant.id = uuid.v4();//creat a id prprietate generand un id cu ajutorul uuid metoda v4
-  const restaurants = getStoredResataurants ();
+  const restaurants = resData.getStoredResataurants ();
  restaurants.push(restaurant);
- storeRestaurants(restaurants);
+ res.Data.storeRestaurants(restaurants);
   res.redirect("/confirm");
 });
 
 app.get("/restaurants", function (req, res) {
-  const filePath = path.join(__dirname, "data", "restaurants.json");
-  const filedata = fs.readFileSync(filePath);
-  const storedRestaurants = JSON.parse(filedata);
-
+  const storedRestaurants = resData.getStoredResataurants();
   res.render("restaurants", {
     numberOfRestaurants: storedRestaurants.length,
     restaurants: storedRestaurants,
@@ -52,6 +51,8 @@ app.get("/restaurants", function (req, res) {
 
 app.get('/restaurants/:id', function (req, res) {
   const restaurantId = req.params.id;
+  const storedRestaurants = resData.getStoredResataurants();
+  
   for (const restaurant  of storedRestaurants){
     if (restaurant.id === restaurantId){
        return res.render("restaurant-detail", { restaurant: restaurant });
